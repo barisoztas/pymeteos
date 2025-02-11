@@ -2,7 +2,7 @@ exclude: '^docs/conf.py'
 
 repos:
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.5.0
+  rev: v5.0.0
   hooks:
   - id: trailing-whitespace
   - id: check-added-large-files
@@ -30,12 +30,12 @@ repos:
 #     ]
 
 - repo: https://github.com/pycqa/isort
-  rev: 5.13.2
+  rev: 6.0.0
   hooks:
   - id: isort
 
 - repo: https://github.com/psf/black
-  rev: 24.2.0
+  rev: 25.1.0
   hooks:
   - id: black
     language_version: python3
@@ -48,7 +48,7 @@ repos:
 #     additional_dependencies: [black]
 
 - repo: https://github.com/PyCQA/flake8
-  rev: 7.0.0
+  rev: 7.1.1
   hooks:
   - id: flake8
     args: [
@@ -66,13 +66,13 @@ repos:
 
 # Strip the output of jupyter notebooks
 - repo: https://github.com/kynan/nbstripout
-  rev: 0.7.1
+  rev: 0.8.1
   hooks:
     - id: nbstripout
 
 # Interrogate for docstring coverage
 - repo: https://github.com/econchick/interrogate
-  rev: 1.5.0
+  rev: 1.7.0
   hooks:
     - id: interrogate
       name: check docstring coverage of functions
