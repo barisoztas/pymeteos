@@ -26,8 +26,6 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
       run: |
-        conda env create -f environment.yml
-        conda activate pymeteos
         pip install -e .[develop]
         python -m pip install --upgrade pip
         python -m pip install flake8 pytest
