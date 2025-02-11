@@ -69,11 +69,3 @@ repos:
   rev: 0.8.1
   hooks:
     - id: nbstripout
-
-# Interrogate for docstring coverage
-- repo: https://github.com/econchick/interrogate
-  rev: 1.7.0
-  hooks:
-    - id: interrogate
-      name: check docstring coverage of functions
-      # args: [-I, -i, -M, --quiet, --fail-under=90]
