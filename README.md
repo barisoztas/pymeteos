@@ -16,12 +16,29 @@
 
 > Python package to retrieve weather data from live data APIs. Playground for climate nerds that is interesting with long-term and extreme events!
 
-A longer description of your project goes here...
+# Structure
 
+The repository has the following structure:
 
-<!-- pyscaffold-notes -->
-
-## Note
-
-This project has been set up using PyScaffold 4.6. For details and usage
-information on PyScaffold see https://pyscaffold.org/.
+     ├── AUTHORS.md
+     ├── CHANGELOG.md		 			<- Keep track of the changes.
+     ├── CONTRIBUTING.md 				<- Documentation for development.
+     ├── docs 							<- documentation in md or rst
+     ├── environment.yml 				<- environment file for the pymeteos package
+     ├── LICENSE.txt 					<- license
+     ├── pyproject.toml 					<- pyproject
+     ├── README.md 						<- here
+     ├── setup.cfg 						<- Declarative configuration of the project
+     ├── setup.py 						<- Use `pip install -e .` to install for
+                                             development or or create a distribution with `tox -e build`.
+     ├── src
+     │   ├── pymeteos 			          <- python package where the main funtionality goes
+     │   │   ├── provider
+     │   │   │   ├── default_provider.py     <- define what provider should do
+     │   │   │   └── meteostat.py 			<- generic provider
+     │   │   └── weather_monster.py 		<- process and converts to nc
+     │   └── service 					<- service module
+     │       ├── config.toml 				<- config
+     │       └── service.py 			     <- sercive
+     ├── tests 						<- unit test
+     └── tox.ini 					     <- Tox configuration file
